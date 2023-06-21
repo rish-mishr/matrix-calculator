@@ -7,6 +7,7 @@ int main(void){
 
 	int option;
 	scanf("%d", &option);
+	struct Matrix *matrix;
 
 	do{
 		if (option == 1){
@@ -17,7 +18,7 @@ int main(void){
 
 			if (m == n){
 				
-				//createMatrix(m, n);
+				matrix = createMatrix(m, n);
 				//calculateDeterminant(matrix);
 			
 			} else {
@@ -29,7 +30,7 @@ int main(void){
 			printf("Enter the dimensions of the augmented matrix in the format m x n\n");
 			int m, n;
 			scanf("%d x %d", &m, &n);
-			//createMatrix(m, n);
+			matrix = createMatrix(m, n);
 			//rowReduce(matrix);
 			//solveMatrix(matrix);
 
