@@ -7,15 +7,12 @@ struct Matrix {
     int* matrix;
 };
 
-struct Matrix *createMatrix(int m, int n){
+struct Matrix *createMatrix(int m, int n){ //create an initial matrix via user input
 
-    struct Matrix a;
-    
-    struct Matrix *A = &a;
+    struct Matrix *A = (struct Matrix*)malloc(2*sizeof(int) + m*n*sizeof(int));
 
     A->m = m;
     A->n = n;
-    A->matrix = (int *)malloc(m * n * sizeof(int));
 
     for (int i = 0; i < m; i++){
 
@@ -28,5 +25,23 @@ struct Matrix *createMatrix(int m, int n){
     }
 
     return A;
+
+}
+
+struct Matrix *createDetMatrix(int m, int n, int m1, struct Matrix *a){ //create a subMatrix for use in calculating a determinant
+    
+    struct Matrix *A = (struct Matrix*)malloc(2*sizeof(int) + m*n*sizeof(int));
+    A->m = m;
+    A->n = n;
+
+    for (int i = 0; i < m; i++){
+
+        for (int j = 0; j < n; j++){
+
+            //TODO
+
+        }
+
+    }
 
 }
